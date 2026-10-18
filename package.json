@@ -1,0 +1,13 @@
+{
+  "name": "open-ai-realtime",
+  "version": "1.0.0",
+  "description": "ChatGPT-style voice agent on the OpenAI Realtime API with Markdown-defined agents and live transcripts",
+  "type": "module",
+  "author": "Nisal Gunawardhana",
+  "license": "MIT",
+  "engines": { "node": ">=20.6" },
+  "scripts": {
+    "start": "node --env-file=.env server.js"
+  },
+  "dependencies": { "express": "^4.21.0" }
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Realtime Voice Agent</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="backdrop" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<main class="app">
+  <header class="bar glass">
+    <h1>Voice Agent</h1>
+    <div class="pickers">
+      <label class="select"><span class="sr">Agent</span><select id="agent"></select></label>
+      <label class="select"><span class="sr">Voice</span>
+        <select id="voice">
+          <option>marin</option><option>cedar</option><option>alloy</option><option>ash</option>
+          <option>ballad</option><option>coral</option><option>echo</option><option>sage</option>
+          <option>shimmer</option><option>verse</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <section class="stage">
+    <div class="orb-wrap">
+      <div id="orb" class="orb idle" aria-hidden="true">
+        <div class="ring"></div>
+        <div class="core"></div>
+      </div>
+    </div>
+    <p id="status" aria-live="polite">Tap the mic to start</p>
+
+    <div class="dock glass">
+      <button id="mute" class="btn" aria-label="Mute microphone" disabled>
+        <svg viewBox="0 0 24 24"><path class="i-mic" d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0M12 17v3"/><path class="i-slash" d="M4 4l16 16"/></svg>
+      </button>
+      <button id="toggle" class="btn main" aria-label="Start conversation">
+        <svg class="ic-mic" viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0M12 17v3"/></svg>
+        <svg class="ic-stop" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2.5"/></svg>
+      </button>
+      <button id="download" class="btn" aria-label="Download transcript" disabled>
+        <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <section class="sheet glass" aria-label="Transcript">
+    <div class="sheet-head">
+      <h2>Transcript</h2>
+      <button id="clear" class="text-btn">Clear</button>
+    </div>
+    <div class="scroller">
+      <div id="messages" class="messages"><p class="empty">Your conversation will appear here.</p></div>
+    </div>
+  </section>
+
+  <footer>Built by <strong>Nisal Gunawardhana</strong></footer>
+</main>
+<audio id="audio" autoplay></audio>
+<script src="app.js"></script>
+</body>
+</html>
