@@ -1,6 +1,10 @@
 # Realtime Voice Agent
 
+
 A ChatGPT-style voice assistant built on the **OpenAI Realtime API**. Talk to it in your browser, see a live transcript, and download the conversation. Each agent's behaviour is defined by a plain **Markdown file**, so you can create new agents without touching any code.
+
+[![Star on GitHub](https://img.shields.io/github/stars/nisalgunawardhana/open-ai-realtime?style=social&label=Star)](https://github.com/nisalgunawardhana/open-ai-realtime)
+[![Follow on GitHub](https://img.shields.io/github/followers/nisalgunawardhana?style=social&label=Follow)](https://github.com/nisalgunawardhana)
 
 ## Features
 
@@ -53,8 +57,8 @@ Browser (public/)                Server (server.js)              OpenAI
 **Requirements:** Node.js 20.6+ and an OpenAI API key with Realtime API access.
 
 ```bash
-git clone <your-repo-url>
-git cd open-ai-realtime
+git clone https://github.com/nisalgunawardhana/open-ai-realtime.git
+cd open-ai-realtime
 npm install
 cp .env.example .env      # then set OPENAI_API_KEY
 npm start
